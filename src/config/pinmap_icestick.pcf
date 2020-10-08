@@ -1,0 +1,98 @@
+#======================================================================
+#
+# pinmap_icestick.v
+# -----------------
+# Pinmap for the Lattice iCEstick Evaluation Kit (ICE40HX1K-STICK-EVN).
+# Used for development of the FPGA based Master Key Memory (MKM).
+#
+#
+# Author: Joachim Strombergson
+# Copyright (c) 2019, NORDUnet A/S
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+# - Redistributions of source code must retain the above copyright notice,
+#   this list of conditions and the following disclaimer.
+#
+# - Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+#
+# - Neither the name of the NORDUnet nor the names of its contributors may
+#   be used to endorse or promote products derived from this software
+#   without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+# TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#======================================================================
+
+# External clock source
+set_io --warn-no-port clk 21
+
+# j1 is the topmpost row of holes.
+# I/Os from right to left.
+set_io --warn-no-port j1_3  112
+set_io --warn-no-port j1_4  113
+set_io --warn-no-port j1_5  114
+set_io --warn-no-port j1_6  115
+set_io --warn-no-port j1_7  116
+set_io --warn-no-port j1_8  117
+set_io --warn-no-port j1_9  118
+set_io --warn-no-port j1_10 119
+
+# j2 is the pmod header.
+#set_io --warn-no-port j2_1 78
+#set_io --warn-no-port j2_2 79
+#set_io --warn-no-port j2_3 80
+#set_io --warn-no-port j2_4 81
+#set_io --warn-no-port j2_7 87
+#set_io --warn-no-port j2_8 88
+set_io --warn-no-port j2_9  90
+set_io --warn-no-port j2_10 91
+
+# fpga_mkm I/Os mapped to j2
+set_io --warn-no-port tamper 87
+set_io --warn-no-port alarm  88
+set_io --warn-no-port sclk   78
+set_io --warn-no-port mosi   79
+set_io --warn-no-port miso   80
+
+
+# j3 is the bottom row of holes.
+# I/Os from right to left.
+set_io --warn-no-port j3_3  62
+set_io --warn-no-port j3_4  61
+set_io --warn-no-port j3_5  60
+set_io --warn-no-port j3_6  56
+set_io --warn-no-port j3_7  48
+set_io --warn-no-port j3_8  47
+set_io --warn-no-port j3_9  45
+set_io --warn-no-port j3_10 44
+
+# The five board LEDs.
+set_io --warn-no-port gled5 95
+set_io --warn-no-port rled1 99
+set_io --warn-no-port rled2 98
+set_io --warn-no-port rled3 97
+set_io --warn-no-port rled4 96
+
+set_io --warn-no-port ir_rx 106
+set_io --warn-no-port ir_tx 105
+set_io --warn-no-port ir_sd 107
+
+
+#======================================================================
+# EOF pinmap_icestick.v
+#======================================================================
